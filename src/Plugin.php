@@ -66,7 +66,7 @@ class Plugin extends AbstractPlugin
 	if($number && is_numeric($number)) {
 	    $query = new Kuaidi($number);
 	    $result = $query->quick_query();
-	    $queue->ircPrivmsg($event->getSource(), 'Query Result: '$result);
+	    $queue->ircPrivmsg($event->getSource(), 'Query Result: '.$result);
 	}else {
 	    $queue->ircPrivmsg($event->getSource(), "Param missing or incorrect! Express ID should be numeric.");
 	}
@@ -78,7 +78,7 @@ class Plugin extends AbstractPlugin
 	foreach($this->commands as $command) {
 	    $msg.=$command.' ';
 	}
-	$msg .= '] [Express ID] -- Query the express status for given ID.'
+	$msg .= '] [Express ID] -- Query the express status for given ID.';
 	$queue->ircPrivmsg($event->getSource(), $msg);
     }
 
