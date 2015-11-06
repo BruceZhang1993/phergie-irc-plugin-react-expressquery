@@ -26,7 +26,8 @@ return [
         // configuration
         new \Phergie\Irc\Plugin\React\ExpressQuery\Plugin([
 
-
+	//Configure is optional    Default: express/kd
+	'commands'=>array('command1', 'command2', ...)
 
         ])
     ]
