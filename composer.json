@@ -1,5 +1,5 @@
 {
-    "name": "phergie/phergie-irc-plugin-react-expressquery",
+    "name": "brucezhang/phergie-irc-plugin-react-expressquery",
     "description": "Phergie plugin for Query express using api",
     "keywords": [ "phergie", "irc", "bot", "plugin" ],
     "license": "BSD-2-Clause",
@@ -14,8 +14,8 @@
     "support": {
         "email": "zy183525594@163.com",
         "irc": "irc://irc.freenode.net/phergie",
-        "issues": "https://github.com/phergie/phergie-irc-plugin-react-expressquery/issues",
-        "source": "https://github.com/phergie/phergie-irc-plugin-react-expressquery"
+        "issues": "https://github.com/BruceZhang1993/phergie-irc-plugin-react-expressquery/issues",
+        "source": "https://github.com/BruceZhang1993/phergie-irc-plugin-react-expressquery"
     },
     "require": {
         "phergie/phergie-irc-bot-react": "~1",
