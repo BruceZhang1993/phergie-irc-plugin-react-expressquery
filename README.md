@@ -1,14 +1,14 @@
-# phergie/phergie-irc-plugin-react-expressquery
+# brucezhang/phergie-irc-plugin-react-expressquery
 
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) plugin for Query express using api.
 
-[![Build Status](https://secure.travis-ci.org/phergie/phergie-irc-plugin-react-expressquery.png?branch=master)](http://travis-ci.org/phergie/phergie-irc-plugin-react-expressquery)
+[![Build Status](https://secure.travis-ci.org/brucezhang/phergie-irc-plugin-react-expressquery.png?branch=master)](http://travis-ci.org/brucezhang/phergie-irc-plugin-react-expressquery)
 
 ## Install
 
 The recommended method of installation is [through composer](http://getcomposer.org).
 
-`php composer.phar require phergie/phergie-irc-plugin-react-expressquery`
+`composer require phergie/phergie-irc-plugin-react-expressquery`
 
 See Phergie documentation for more information on
 [installing and enabling plugins](https://github.com/phergie/phergie-irc-bot-react/wiki/Usage#plugins).
@@ -17,7 +17,7 @@ See Phergie documentation for more information on
 
 | Command    | Parameters        | Description           |
 |:----------:|-------------------|-----------------------|
-| {commmand} | [param1] [param2] | {description}         |
+| kd/express |   [Express ID]    | Express status query  |
 ## Configuration
 
 ```php
@@ -26,8 +26,11 @@ return [
         // configuration
         new \Phergie\Irc\Plugin\React\ExpressQuery\Plugin([
 
-	//Configure is optional    Default: express/kd
-	'commands'=>array('command1', 'command2', ...)
+		//User-defined commands    Default: express/kd
+		'commands' => array('command1', 'command2', ...),
+		
+		//Latest {lines} status will be shown     Deault: 5
+		'lines' => 5
 
         ])
     ]
@@ -40,7 +43,7 @@ To run the unit test suite:
 
 ```
 curl -s https://getcomposer.org/installer | php
-php composer.phar install
+composer install
 ./vendor/bin/phpunit
 ```
 
