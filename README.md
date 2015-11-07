@@ -2,7 +2,7 @@
 
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) plugin for Query express using api.
 
-[![Build Status](https://secure.travis-ci.org/brucezhang/phergie-irc-plugin-react-expressquery.png?branch=master)](http://travis-ci.org/brucezhang/phergie-irc-plugin-react-expressquery)
+[![Build Status](https://secure.travis-ci.org/BruceZhang1993/phergie-irc-plugin-react-expressquery.png?branch=master)](http://travis-ci.org/BruceZhang1993/phergie-irc-plugin-react-expressquery)
 
 ## Install
 
