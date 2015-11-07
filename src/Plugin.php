@@ -25,7 +25,7 @@ include "kuaidi.class.php";
 class Plugin extends AbstractPlugin
 {
     protected $commands = [];
-    protacted $lines = 0;
+    protected $lines = 0;
     /**
      * Accepts plugin configuration.
      *
