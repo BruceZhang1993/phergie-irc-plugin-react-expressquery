@@ -8,7 +8,7 @@
 
 The recommended method of installation is [through composer](http://getcomposer.org).
 
-`composer require phergie/phergie-irc-plugin-react-expressquery`
+`composer require brucezhang/phergie-irc-plugin-react-expressquery`
 
 See Phergie documentation for more information on
 [installing and enabling plugins](https://github.com/phergie/phergie-irc-bot-react/wiki/Usage#plugins).
