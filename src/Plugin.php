@@ -82,7 +82,7 @@ class Plugin extends AbstractPlugin
 
     public function queryExpressHelp(Event $event, Queue $queue)
     {
-	$msg="Usage: [";
+	$msg="Usage: [ ";
 	foreach($this->commands as $command) {
 	    $msg.=$command.' ';
 	}
