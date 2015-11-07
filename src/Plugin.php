@@ -25,6 +25,7 @@ include "kuaidi.class.php";
 class Plugin extends AbstractPlugin
 {
     protected $commands = [];
+    protacted $lines = 0;
     /**
      * Accepts plugin configuration.
      *
@@ -34,9 +35,10 @@ class Plugin extends AbstractPlugin
      *
      * @param array $config
      */
-    public function __construct(array $config = ['commands' => ['express', 'kd']])
+    public function __construct(array $config = ['commands' => ['express', 'kd'], 'lines' => 5 ])
     {
 	$this->commands = $config['commands']; 
+	$this->lines = $config['lines'];
     }
 
     /**
@@ -62,11 +64,17 @@ class Plugin extends AbstractPlugin
      */
     public function queryExpress(Event $event, Queue $queue)
     {
-	$number = $event->getCustomParams();
+	$number = $event->getCustomParams()[0];
 	if($number && is_numeric($number)) {
 	    $query = new Kuaidi($number);
-	    $result = $query->quick_query();
-	    $queue->ircPrivmsg($event->getSource(), 'Query Result: '.$result);
+	    $result = json_decode( $query->quick_query(),true );
+	    $queue->ircPrivmsg($event->getSource(), 'Query Result: ');
+	    for($i=0; $i<$this->lines; $i++) {
+		if(@isset($result['data'][$i])) {
+	            $msg= $result['data'][$i]['time'].' -- '.$result['data'][$i]['context'];
+		    $queue->ircPrivmsg($event->getSource(), $msg);
+	        }
+            }
 	}else {
 	    $queue->ircPrivmsg($event->getSource(), "Param missing or incorrect! Express ID should be numeric.");
 	}
